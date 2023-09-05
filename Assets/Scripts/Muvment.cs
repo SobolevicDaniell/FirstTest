@@ -21,7 +21,7 @@ public class Muvment : MonoBehaviour
     {
         if (Input.GetButton("Jump") || Input.GetButton("Fire1"))
         {
-            _rb.velocity = Vector2.up * forse;
+            _rb.AddForce(transform.up * forse);
         }
     }
 }
