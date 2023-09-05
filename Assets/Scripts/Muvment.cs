@@ -8,10 +8,11 @@ public class Muvment : MonoBehaviour
     [SerializeField] private float forse;
 
     [SerializeField] private Rigidbody2D _rb;
-    private bool IsStart = false;
+    private bool IsPaused ;
     void Start()
-    {
-         
+    {   
+        
+        
     }
 
     void Update()
@@ -22,6 +23,8 @@ public class Muvment : MonoBehaviour
         
         
     }
+
+   
 
     void UpDown()
     {
