@@ -11,19 +11,15 @@ public class Muvment : MonoBehaviour
     private bool IsStart = false;
     void Start()
     {
-        if (Input.GetButton("Jump") || Input.GetButton("Fire1"))
-        {
-            IsStart = true;
-        }    
+         
     }
 
     void Update()
     {
         transform.Translate(speed * Time.deltaTime, 0f, 0f);
-        if (IsStart)
-        {
-            UpDown();
-        }
+        
+        UpDown();
+        
         
     }
 
