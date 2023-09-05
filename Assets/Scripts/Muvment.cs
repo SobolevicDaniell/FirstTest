@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class Muvment : MonoBehaviour
 {
+    [SerializeField] private float speed;
     [SerializeField] private float forse;
 
     [SerializeField] private Rigidbody2D _rb;
+    private bool IsStart = false;
     void Start()
     {
-        //_rb = GetComponent<Rigidbody2D>();
+        if (Input.GetButton("Jump") || Input.GetButton("Fire1"))
+        {
+            IsStart = true;
+        }    
     }
 
     void Update()
     {
-        UpDown();
+        transform.Translate(speed * Time.deltaTime, 0f, 0f);
+        if (IsStart)
+        {
+            UpDown();
+        }
+        
     }
 
     void UpDown()
